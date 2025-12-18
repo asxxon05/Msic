@@ -371,7 +371,8 @@ int main(){
     ListaP* Playlists = new ListaP();
     Historial* historial = new Historial();
     ColaRep* colaReproduccion = new ColaRep();
-
+    ListaDoble* nuevaLista = new ListaDoble();
+    
     do{
         mostrarMenu();
         cin >> op;
@@ -397,7 +398,7 @@ int main(){
                 string ListaSelec;
                 cin.ignore();
                 getline(cin, ListaSelec);
-                ListaDoble* nuevaLista = new ListaDoble();
+                
                 nuevaLista->nombreLista = ListaSelec;
                 cout << "Playlist/álbum " << ListaSelec << " creada exitosamente." << endl;
                 break;
