@@ -372,6 +372,9 @@ int main(){
     Historial* historial = new Historial();
     ColaRep* colaReproduccion = new ColaRep();
     ListaDoble* nuevaLista = new ListaDoble();
+
+    string nombreCancion;
+    string ListaSelec;
     
     do{
         mostrarMenu();
@@ -382,7 +385,6 @@ int main(){
                 break;
 
             case 2:     //Eliminar canción de la biblioteca
-                string nombreCancion;
                 cout << "Ingrese el nombre de la canción a eliminar: ";
                 cin.ignore();
                 getline(cin, nombreCancion);
@@ -395,7 +397,6 @@ int main(){
 
             case 4:     //Crear playlist/álbum
                 cout << "Ingrese el nombre de la nueva playlist/álbum: ";
-                string ListaSelec;
                 cin.ignore();
                 getline(cin, ListaSelec);
                 
