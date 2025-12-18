@@ -374,8 +374,8 @@ int main(){
     ListaDoble* nuevaLista = new ListaDoble();
 
     string nombreCancion;
-    string ListaSelec;
-    
+    string ListaSeleccionada;
+
     do{
         mostrarMenu();
         cin >> op;
@@ -399,7 +399,6 @@ int main(){
                 cout << "Ingrese el nombre de la nueva playlist/álbum: ";
                 cin.ignore();
                 getline(cin, ListaSelec);
-                
                 nuevaLista->nombreLista = ListaSelec;
                 cout << "Playlist/álbum " << ListaSelec << " creada exitosamente." << endl;
                 break;
@@ -413,11 +412,10 @@ int main(){
                 switch(opModLista){
                     case 1:     //Cambiar nombre de la lista
                         cout << "Ingrese el nuevo nombre de la lista: ";
-                        string ListaSelec;
                         cin.ignore();
-                        getline(cin, ListaSelec);
-                        nuevaLista->cambiarNombre(nuevaLista, ListaSelec);
-                        cout << "Nombre cambiado exitosamente a " << ListaSelec << "."<< endl;
+                        getline(cin, ListaSeleccionada);
+                        nuevaLista->cambiarNombre(nuevaLista, ListaSeleccionada);
+                        cout << "Nombre cambiado exitosamente a " << ListaSeleccionada << "."<< endl;
                         break;
 
                     case 2:     //Agregar canción
@@ -426,11 +424,10 @@ int main(){
                         break;
 
                     case 3:     //Eliminar canción
-                        string nombreCancionEliminar;
                         cout << "Ingrese el nombre de la canción a eliminar: ";
                         cin.ignore();
-                        getline(cin, nombreCancionEliminar);
-                        nuevaLista->eliminarCancion(nuevaLista->head, nombreCancionEliminar);
+                        getline(cin, nombreCancion);
+                        nuevaLista->eliminarCancion(nuevaLista->head, nombreCancion);
                         cout << "Canción eliminada exitosamente de la lista." << endl;
                         break;
 
@@ -503,4 +500,4 @@ int main(){
     } while(op != 9);
 
     return 0;
-}
+};
